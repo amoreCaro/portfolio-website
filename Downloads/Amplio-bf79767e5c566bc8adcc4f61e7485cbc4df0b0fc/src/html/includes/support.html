@@ -1,0 +1,28 @@
+<section class="support section h-center <%= additionalClass %>">
+  <div class="support__container">
+    <div class="support__title">
+      <h2><%= title %></h2>
+    </div>
+    <div class="support__list">
+      <% supportList.forEach(function(item, index) { %>
+        <div class="support__item" data-tab-target="tab<%= index %>"> <!-- Додаємо data-tab-target -->
+          <button class="btn support__item-button">
+            <div class="support__item-text">
+              <p><%= item.text %></p>
+            </div>
+            <div class="support__item-image">
+              <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="0.513916" width="60" height="60" rx="20" fill="#E2E7F8"/>
+                <path d="M31 23.0139C31 22.4616 30.5523 22.0139 30 22.0139C29.4477 22.0139 29 22.4616 29 23.0139H31ZM29.2929 38.721C29.6834 39.1115 30.3166 39.1115 30.7071 38.721L37.0711 32.3571C37.4616 31.9665 37.4616 31.3334 37.0711 30.9428C36.6805 30.5523 36.0474 30.5523 35.6569 30.9428L30 36.5997L24.3431 30.9428C23.9526 30.5523 23.3195 30.5523 22.9289 30.9428C22.5384 31.3334 22.5384 31.9665 22.9289 32.3571L29.2929 38.721ZM29 23.0139V38.0139H31V23.0139H29Z" fill="#7F7F7F"/>
+              </svg>
+            </div>
+          </button>
+         
+        </div>
+        <div class="support__item-content" id="tab<%= index %>"> <!-- ID для відповідного контенту -->
+          <p><%= item.contentText %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>

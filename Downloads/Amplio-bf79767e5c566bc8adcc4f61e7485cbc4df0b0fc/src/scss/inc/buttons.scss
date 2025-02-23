@@ -1,0 +1,320 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  & p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &-green {
+    background-color: $accent-color;
+    color: $black;
+    &:hover {
+      transition: $transition;
+    }
+  }
+  &-tabs {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #bcbcbc;
+    }
+    &.active {
+      color: $default-black;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $blue;
+      }
+    }
+  }
+  &-calculator-tabs {
+    background-color: #eee;
+    color: $default-black;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 7px 14px;
+    border-radius: 4px;
+    &.active {
+      color: $blue;
+      background: #2046d21a;
+    }
+    &:hover {
+      color: $blue;
+      background: #2046d21a;
+      transition: $transition;
+    }
+  }
+  &-large {
+    width: 100%;
+    min-width: 360px;
+    height: 80px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 16px;
+    padding: 30px 66.5px;
+
+    & img {
+      margin-left: 25px;
+    }
+
+  }
+  &-medium {
+    width: 100%;
+    min-width: 340px;
+    height: 80px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 16px;
+    padding: 30px 66.5px;
+    & img {
+      margin-left: 20px;
+    }
+  }
+  &-small {
+    width: 100%;
+    min-width: 260px;
+    height: 80px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 16px;
+    padding: 30px 18.5px;
+    & img {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .btn-primary {
+    height: 60px;
+    min-width: 256px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 12px;
+  }
+  .btn-large {
+    border-radius: 12px;
+    height: 60px;
+    min-width: 240px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 22px 26px;
+    & img {
+      margin-left: 8px;
+      max-width: 16px;
+      width: 100%;
+      height: 16px;
+    }
+  }
+  .btn-medium {
+    width: 100%;
+    min-width: 256px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 12px;
+    padding: 20px 40px;
+    & img {
+      margin-left: 18px;
+      max-width: 16px;
+      width: 100%;
+    }
+    &:hover {
+      transition: $transition;
+    }
+  }
+  .btn-small {
+    width: 100%;
+    min-width: 240px;
+    height: 60px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 16px;
+    padding: 22px 18px;
+    & img {
+      margin-left: 20px;
+    }
+  }
+  .btn-calculator-tabs {
+    height: 30px;
+  }
+  .btn-tabs {
+    font-size: 14px;
+    line-height: 16.8px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+    }
+    &.active {
+      &::after {
+        bottom: -10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-primary {
+    min-width: 320px;
+    width: 100%;
+    height: 80px;
+  }
+  .btn-large {
+    border-radius: 16px;
+    min-width: 360px;
+    height: 80px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 22px 46px;
+    & img {
+      margin-left: 7px;
+      max-width: 16px;
+      width: 100%;
+      height: 16px;
+    }
+  }
+  .btn-medium {
+    width: 100%;
+    min-width: 340px;
+    height: 80px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 16px;
+    & img {
+      margin-left: 18px;
+
+        margin-left: 18px;
+        max-width: 16px;
+        width: 100%;
+      
+    }
+    &:hover {
+      transition: $transition;
+    }
+  }
+  .btn-small {
+    width: 100%;
+    min-width: 320px;
+    height: 80px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 16px;
+    padding: 22px 18px;
+    & img {
+      margin-left: 20px;
+    }
+  }
+  .btn-tabs {
+    font-size: 18px;
+    line-height: 21.6px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -14.5px;
+    }
+    &.active {
+      &::after {
+        bottom: -14.5px;
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .btn-calculator-tabs {
+    height: 44px;
+  }
+  .btn-medium {
+    padding: 20px 55px;
+    width: 100%;
+    min-width: 280px;
+    height: 60px;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 16px;
+    & img {
+      margin-left: 8px;
+    }
+    &:hover {
+      transition: $transition;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .btn-primary {
+    min-width: 320px;
+    width: 100%;
+    height: 60px;
+  }
+  .btn-calculator-tabs {
+    // height: 30px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .btn-large {
+    border-radius: 16px;
+    height: 60px;
+    min-width: 320px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 22px 46px;
+    & img {
+      margin-left: 7px;
+      max-width: 16px;
+      width: 100%;
+      height: 16px;
+    }
+  }
+  .btn-small {
+    width: 100%;
+    min-width: 320px;
+    height: 60px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 16px;
+    padding: 22px 18px;
+    & img {
+      margin-left: 20px;
+    }
+  }
+  .btn-tabs {
+    font-size: 16px;
+    line-height: 19.2px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+    }
+    &.active {
+      &::after {
+        bottom: -10px;
+      }
+    }
+  }
+}

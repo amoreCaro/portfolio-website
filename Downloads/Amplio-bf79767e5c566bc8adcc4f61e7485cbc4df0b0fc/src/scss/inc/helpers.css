@@ -1,0 +1,10 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-height: 100vh;
+}
+.page__main {
+  flex: 1;
+  max-width: 100%;
+}/*# sourceMappingURL=helpers.css.map */

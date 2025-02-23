@@ -1,0 +1,257 @@
+<% var data = { title: "Home " }; %>
+<%=_.template(require('./../includes/header.html').default)(data) %>
+<main class="page__main">
+
+<%= _.template(require('./../includes/advantages.html').default)({
+    additionalClass: "", 
+    title: "Чому обирають нас",
+    subtitle: "Amplio — компанія , яка спеціалізуємться на кредитуванні підприємців в Україні",
+    advantagesList: [
+      { 
+        text: "Тільки онлайн, вам нетреба нікуди їхати",
+        imageSrc: 'img/successful_operation.png',
+          
+            bottomImageSrc: 'img/money.png',
+            bottomImageAlt: 'Надійність внизу',
+            bottomText: '<span> Отримано зарахування</span> 80,000 грн.'
+      },
+      { 
+        text: "Нам не потрібні застава та поручителі",
+        imageSrc: 'img/advantages__image-2.png'
+      },
+      { 
+        text: "Видаємо кредит за <b> 30 хвилин</b>",
+        imageSrc: 'img/advantages__image-3.png', 
+        centerText: 'Отримайте переказ через:', 
+        bottomImageSrc: 'img/advantages__image-3.2.png',
+        bottomText: 'Старт',
+      }
+    ],
+    btn: {
+      text: "Розрахувати кредит",
+      class: "btn-primary",
+    },
+    text: "Натискаючи кнопку “Розрахувати кредит”  <br>ви даєте згоду на обробку персональних даних "
+}) %>
+
+<%= _.template(require('./../includes/tabs.html').default)({
+    additionalClass: "",
+    decor: "img/tabs__image.png",
+    title: "Усе, що треба",
+    buttons: [
+        { 
+            text: "Умови", 
+            class: "btn-tabs openTab active",
+            tabTarget: "tabs-all"
+        },
+        { 
+            text: "Документи", 
+            class: "btn-tabs openTab",
+            tabTarget: "tabs-news"  
+        },
+        { 
+            text: "Вимоги", 
+            class: "btn-tabs openTab",
+            tabTarget: "tabs-events" 
+        },
+    ],
+    groupItems: [
+        {
+            id: "tabs-all", 
+            items: [
+                { title: "Номінальна ставка", text: "<span>0,01%</span> річних" },
+                { title: "Термін", text: "до <span>36 міс.</span>" },
+                { title: "Сума", text: "<span>до 200 тис.</span> грн." },
+                { title: "Одноразова комісія", text: "<span>6,9%</span>" },
+                { title: "Щомісячна комісія", text: "<span>6,9%</span>" }
+            ],
+            btn: {
+                class: "btn btn-green btn-large",
+                text: "Розрахувати кредит",
+                imgSrc: "img/calculator.png",
+                link: "/apply" 
+            }
+        },
+        {
+            id: "tabs-news", 
+            items: [
+                { title: "vfdfvd", text: "aaaaa" }
+            ]
+        },
+        {
+            id: "tabs-events", 
+            classes: "tabs--full",
+            items: [
+                { title: "Вік позичальника від 23 до 65 років"},
+                { title: "Строк діяльності: ФОП – 6 місяців, ЮО – 12 місяців."},
+                { title: "Фінансова звітності ФОП/ЮО"},
+                { title: "Не здійснювалась зміна засновника компанії менше ніж пів року до подання заявки на кредит"},
+                { title: "Наявність безготівкових оборотів по рахунках за останні 6 місяців"}
+            ]
+        }
+    ]
+}) %>
+
+<%= _.template(require('./../includes/calculator.html').default)({
+    additionalClass: "", 
+    title: "Розрахуйте та подайте заявку на отримання кредиту",
+    calculator: {
+        fields: [
+            {
+                inputId: "inputCreditSum", 
+                inputMin: 1000,
+                inputMax: 200000,
+                inputStep: 1,
+                inputValue: 50,
+                minAmount: "1000 грн",
+                maxAmount: "200 000 грн",
+                label: "Сума кредиту"
+            },
+            {
+                inputId: "inputTerm", 
+                inputMin: 6,
+                inputMax: 24,
+                inputStep: 1,
+                inputValue: 6,
+                minAmount: "6 місяців",
+                maxAmount: "24 місяці",
+                label: "Термін"
+            }
+        ],
+        ctaImageUrl: "img/calcuator-wallet.png", 
+        ctaText: "Щомісячний платіж", 
+        ctaSubtitle: "27 000 грн",
+        additionalInfo: "Ці розрахунки є орієнтовними", 
+        infoSections: [
+            {
+                imageUrl: "img/calculator__info-1.png",
+                text: "Загальні витрати за кредитом, грн",
+                subtitle: "27 000 грн"
+            },
+            {
+                imageUrl: "img/calculator__info-2.png",
+                text: "Загальна вартість кредиту, грн",
+                subtitle: "27 000 грн"
+            }
+        ]
+    },
+            buttons: [
+            { 
+                text: "6 місяців", 
+                class: "btn-calculator-tabs openTab active",
+                tabTarget: "calculatorTabTarget"
+            },
+            { 
+                text: "12 місяців", 
+                class: "btn-calculator-tabs openTab",
+                tabTarget: "calculatorTabTarget"  
+            },
+            { 
+                text: "24 місяці", 
+                class: "btn-calculator-tabs openTab",
+                tabTarget: "calculatorTabTarget" 
+            },
+        ],
+    btn: {
+        class: "btn btn-green btn-medium",
+        text: "Отримати кредит",
+        imgSrc: "img/calculator.png",
+        link: "/apply" 
+    }
+}) %>
+
+
+<%= _.template(require('./../includes/guide.html').default)({
+    additionalClass: "", 
+    title: "Отримайте кредит за 3 кроки",
+    guideList: [
+      { 
+        number: "1", 
+        text: "Оберіть суму та термін кредиту ",
+        image: [
+          "img/arrow-decor.png"
+        ] 
+      },
+      { 
+        number: "2",
+        text: "Зареєструйтесь та оформіть заявку ",
+        image: [
+          "img/arrow-decor.png"
+        ] 
+      },
+      { 
+        number: "3",
+        text: "Отримайте свій кредит",
+        image: [
+          "img/arrow-decor.png"
+        ] 
+      }
+    ],
+    btn: {
+      text: "Розрахувати кредит",
+      imgSrc: "img/calculator.png",
+
+      class: "btn btn-green btn-small",
+    },
+    text: "Натискаючи кнопку “Розрахувати кредит”  <br>ви даєте згоду на оброку персональних даних "
+  }) %>
+
+<%= _.template(require('./../includes/credit.html').default)({
+  additionalClass: "", 
+  title: "Прості способи погашення кредиту",
+  creditList: [
+    { 
+      title: "В особистому кабінеті Amplio", 
+      text: "Ви можете погасити у Amplio Ваш кредит онлайн не виходячи з дому. Просто перейдіть в особистий кабінет та сплатіть кредит банківською картою.",
+      image: [
+        "img/visa.png",
+        "img/mastercard.png"
+      ] 
+    },
+    { 
+      title: "Через платіжні термінали",
+      text: "Оплата кредиту в терміналі EasyPay та City24 – це швидко та зручно. Термінал Ви зможете знайти у найближчому до Вас супермаркеті.",
+      image: [
+        "img/easypay.png",
+        "img/city-24.png",
+        "img/privat-bank.png"
+      ] 
+    },
+    { 
+      title: "В особистому кабінеті Amplio",
+      text: "У будь-якому відділенні Нової Пошти можна оплатити готівкою через касу за номером телефону.",
+      image: [
+        "img/nova-post.png"
+      ] 
+    },
+    { 
+      title: "В особистому кабінеті Amplio", 
+      text: "Погасити/продовжити кредит у Amplio можна в касах банків-партнерів.",
+      image: [
+
+        "img/ukrsibbank.png",
+        "img/privat-bank-mini.png",
+        "img/sense-bank.png",
+        "img/universal-bank.png"
+      ] 
+    }
+  ]
+}) %>
+
+
+<%= _.template(require('./../includes/support.html').default)({
+  additionalClass: "", 
+  title: "Відповідаємо на часті запитання",
+  supportList: [
+    { text: "Наші переваги", 
+      contentText:"Відкриття Банківського рахунку Ви можете зробити в банках України або через послугу для бізнесу під назвою єПідприємець заповнивши заяву на порталі “Дія” "
+    },
+    { text: "Які документи потрібні для отримання кредиту" },
+    { text: "Як погасити кредит" }
+  ]
+}) %>
+
+
+</main>
+
+<%=_.template(require('./../includes/footer.html').default)(data) %>

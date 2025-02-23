@@ -1,0 +1,49 @@
+<section class="tabs section h-center <%= additionalClass %>">
+  <div class="tabs__container h-text">
+    <div class="tabs__left">
+      <div class="tabs__title">
+        <h2><%= title %></h2>
+      </div>
+
+      <div class="tabs__buttons">
+        <% buttons.forEach(function(button) { %>
+          <button
+            class="btn <%= button.class %>"
+            data-tab-target="<%= button.tabTarget %>"
+          >
+            <%= button.text %>
+          </button>
+        <% }); %>
+      </div>
+
+      <% groupItems.forEach(function(groupItem) { %>
+        <div class="tabs__list" id="<%= groupItem.id %>">
+          <% groupItem.items.forEach(function(item) { %>
+            <div class="tabs__item">
+              <ul class="colored-bullet">
+                <li><%= item.title %></li>
+              </ul>
+              <p><%= item.text %></p>
+            </div>
+          <% }); %>
+        </div>
+      <% }); %>
+      
+            <!-- Move the button section here -->
+            <% groupItems.forEach(function(groupItem) { %>
+              <% if (groupItem.btn) { %>
+                <div class="tabs__btn">
+                  <a href="<%= groupItem.btn.link %>" class="btn <%= groupItem.btn.class %>">
+                    <%= groupItem.btn.text %>
+                    <img src="<%= groupItem.btn.imgSrc %>" alt="Button Image" />
+                  </a>
+                </div>
+              <% } %>
+            <% }); %>
+    </div>
+
+      <div class="tabs__decor">
+        <img src="<%= decor %>" alt="Tabs Decoration" />
+      </div>
+  </div>
+</section>

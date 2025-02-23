@@ -1,0 +1,63 @@
+.h-text {
+  // & p {
+  //   font-weight: 400;
+  //   font-size: 16px;
+  //   line-height: 24px;
+  //   color: $text-color;
+  //   margin-bottom: 32px;
+
+  //   & b {
+  //     font-weight: 700;
+  //     color: $accent-color;
+  //   }
+
+  //   & a {
+  //     font-weight: 400;
+  //     font-size: 16px;
+  //     line-height: 24px;
+  //     color: $text-color;
+  //     text-decoration: underline;
+  //     &:hover {
+  //       text-decoration: none;
+  //     }
+  //   }
+  // }
+
+  ul {
+    color: $text-color;
+    list-style: none; // прибирає стандартні маркери
+    padding-left: 0;  // прибирає відступ
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    &.colored-bullet li {
+      display: flex;
+      align-items: center; // для центрованого вирівнювання маркера і тексту
+      margin-bottom: 16px; // за потребою для відступу між елементами списку
+    }
+  
+    &.colored-bullet li::before {
+      content: "\2022";  // встановлення символу маркера вручну
+      color: $blue;
+      font-size: 21px;
+      margin-right: 12px;
+    }
+  }
+  
+  // & blockquote {
+  //   color: $accent-color;
+  //   font-weight: 400;
+  //   font-style: italic;
+  //   font-size: 24px;
+  //   line-height: 42px;
+  // }
+}
+
+@media (max-width: 375px) {
+  .h-text {
+    ul.colored-bullet li {
+      // margin-bottom: 13px;
+    }
+  }
+}

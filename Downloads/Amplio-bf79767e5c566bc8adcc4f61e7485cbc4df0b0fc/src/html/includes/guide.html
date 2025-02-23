@@ -1,0 +1,38 @@
+<section class="guide section h-center <%= additionalClass %>">
+    <div class="guide__container">
+      <div class="guide__title">
+        <h2><%= title %></h2>
+      </div>
+  
+      <div class="guide__bottom">
+        <div class="guide__list">
+          <% guideList.forEach(function(item) { %>
+          <div class="guide__list-item">
+            <div class="guide__list-item-text">
+              <span><%= item.number %></span>
+              <p><%= item.text %></p>
+            </div>
+  
+            <!-- Перевіряємо, чи є зображення, і якщо є, виводимо його -->
+            <% if (item.image) { %>
+            <img
+              src="<%= item.image %>"
+              alt="Image for <%= item.number %>"
+              class="guide__list-item__decor"
+            />
+            <% } %>
+          </div>
+          <% }); %>
+        </div>
+        <div class="guide__left">
+          <div class="guide__btn">
+            <a href="#" class="btn <%= btn.class %>" target="_blank">
+              <%= btn.text %>
+              <img src="<%= btn.imgSrc %>" alt="calculator button" class="btn-icon" />
+            </a>
+          </div>
+          <p><%= text %></p>
+        </div>
+      </div>
+    </div>
+  </section>
