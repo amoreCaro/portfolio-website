@@ -27,9 +27,13 @@
   &__buttons {
     display: flex;
     margin-bottom: 80px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    & p {
+      text-align: center;
+    }
   }
+
 
   &__list {
     display: none;
@@ -99,6 +103,9 @@
 
 .tabs__list.active {
   display: block;
+}
+.tabs--full {
+  min-width: 100%;
 }
 
 

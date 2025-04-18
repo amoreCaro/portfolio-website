@@ -19,8 +19,8 @@
       <% groupItems.forEach(function(groupItem) { %>
         <div class="tabs__list" id="<%= groupItem.id %>">
           <% groupItem.items.forEach(function(item) { %>
-            <div class="tabs__item">
-              <ul class="colored-bullet">
+            <div class="tabs__item ">
+              <ul class="colored-bullet <%= groupItem.classes %>">
                 <li><%= item.title %></li>
               </ul>
               <p><%= item.text %></p>
@@ -28,6 +28,7 @@
           <% }); %>
         </div>
       <% }); %>
+      
       
             <!-- Move the button section here -->
             <% groupItems.forEach(function(groupItem) { %>
