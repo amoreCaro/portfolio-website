@@ -1,0 +1,156 @@
+.hidden{
+	display: none !important;
+}
+
+.hide{
+    opacity: 0;
+    z-index: -1;
+}
+.h-opacity:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.03);
+    width: 100%;
+    height: 100%;
+}
+
+.h-flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.h-flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+    .h-flex-between{
+        flex-direction: column;
+    }
+}
+
+.h-content {
+    *{
+        color: $text;
+    }
+    ul {
+        list-style: disc;
+        padding-left: 15px;
+        
+    }
+    ol {
+        list-style: decimal;
+        padding-left: 15px;
+    }
+    li{
+        margin-bottom: 15px;
+        font-size: 1rem;
+    }
+    li::marker {
+        color: $primary;
+    }
+    p {
+        line-height: 2rem;
+        font-size: 1rem; // 16px
+        font-weight: 500;
+        margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+        img{
+            margin-top: 20px;
+        }
+        a{
+            color: $primary;
+            font-size: 16px;
+            border-bottom: 1px solid $primary;
+            transition: 0.2s ease;
+            &:hover{
+                border-color: transparent;
+                color: $blue-hover;
+            }
+        }
+        
+    }
+    p:has(img){
+        margin: 0;
+    }
+    img{
+        margin-bottom: 20px;
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+    }
+    iframe {
+        overflow: hidden;
+        margin: 10px 0;
+    }
+    div{
+        line-height: 32px;
+        font-size: 1.14rem;
+        font-weight: 500;
+    }
+}
+.h-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.h-full{
+    width: 100%;
+    max-width: 100%;
+}
+.h-bg{
+    background-color: white ;
+}
+.h-border {
+    border: 2px solid  $primary;
+}
+
+
+.h-bg.green{
+    background-color: $primary;
+    &:hover{
+        background-color: $green-hover;
+    }
+}
+.h-bg.black{
+    background-color: $black;
+    &:hover{
+        // background-color: $;
+    }
+}
+.h-bg.gray{
+    background-color: $gray;
+    &:hover{
+        // background-color: $;
+    }
+}
+.h-bg.blue{
+    background-color: $blue;
+    &:hover{
+        // background-color: $;
+    }
+}
+
+
+
+.h-link{
+    background-color: none !important;
+}
+.h-cover{
+    object-fit: cover;
+}
+.h-containe{
+    object-fit: contain;
+}
+
+.h-flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}

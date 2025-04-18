@@ -1,0 +1,128 @@
+// Thin
+@font-face {
+    font-family: 'Golos';
+    src: url('../fonts/golos/Golos-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  // Extra Light
+  @font-face {
+    font-family: 'Golos';
+    src: url('../fonts/golos/Golos-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  // Light
+  @font-face {
+    font-family: 'Golos';
+    src: url('../fonts/golos/Golos-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  // Regular
+  @font-face {
+    font-family: 'Golos';
+    src: url('../fonts/golos/Golos-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  // Medium
+  @font-face {
+    font-family: 'Golos';
+    src: url('../fonts/golos/Golos-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  // Bold
+  @font-face {
+    font-family: 'Golos';
+    src: url('../fonts/golos/Golos-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  // Cursive Light (if available)
+  @font-face {
+    font-family: 'Golos';
+    src: url('../fonts/golos/Golos_Cursive-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  * {
+    font-family: "Golos Text", sans-serif;
+  }
+  
+  html, body {
+    font-family: "Golos Text", sans-serif;
+    font-size: 16px; // 1rem = 16px
+    font-weight: 500;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    color: $text;
+  }
+  
+  p {
+    font-weight: 500;
+    color: $text;
+    font-size: 16px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  
+  a, button {
+    font-weight: 500;
+    color: $text;
+  }
+  
+  h1 {
+    font-size: 56px;
+    font-weight: 400;
+  }
+  
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+  }
+  
+  h3 {
+    font-size: 34px;
+    font-weight: 400;
+  }
+  
+  h4 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  
+  h5 {
+    font-size: 26px;
+    font-weight: 400;
+  }
+  
+  h6 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 48px;
+    }
+  }
+  
