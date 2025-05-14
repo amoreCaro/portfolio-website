@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    outline: none;
+}
+
+*{
+    letter-spacing: -0.04em;
+}
+
+*:focus {
+    outline: none;
+}
+  
+*:focus-visible {
+    outline: none;
+}
+
+*:active{
+    outline: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h6,
+h5 {
+    margin: 0;
+    font-style: normal;
+}
+
+a,
+input,
+textarea,
+fieldset,
+button,
+ul,
+ol,
+label,
+legend {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: normal;
+    font-style: normal;
+}
+
+img{
+    display: block;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.66;
+    overflow-x: hidden;
+    color: $text;
+    background-color: #0F0F11;
+    font-family: "Poppins", sans-serif;
+}
+.main {
+    width: 100%;
+    margin-top: 140px;
+}
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 1160px;
+    width: 100%;
+    // border: 1px solid red;
+    margin: 0 auto;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: whitesmoke;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #595959;
+    border-radius: 10px;
+}
+
+.section{
+    margin: 0 auto;
+    > div {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1240px) {
+    .section {
+        max-width: 87%;
+    }
+
+    .page__wrapper{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .main{
+        margin-top: 100px;
+    }
+    
+}
+
+@media (max-width: 769px) {
+    *{
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .section {
+        max-width: 100%;
+    }
+
+    .container{
+        max-width: calc(100% - 88px); 
+    }
+}
+
+@media (max-width: 465px) {
+    .container{
+        max-width: calc(100% - 44px); 
+    }
+}

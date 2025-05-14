@@ -1,0 +1,18 @@
+$font-family: 'Poppins', sans-serif;
+$primary: #5C45FD;
+$light-purple: #A89BFF;
+$black: #161616;
+$gray: #969799;
+$white: #F5F5F5;
+$text: #1E1E1E;
+$dark-blue: #30313D;
+$transition: all 0.6s ease;
+
+.heading-gradient {
+    background: linear-gradient(270deg, #5C45FD, #8373ea,#daadff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
