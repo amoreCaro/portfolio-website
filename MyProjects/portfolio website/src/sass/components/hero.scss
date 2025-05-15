@@ -1,0 +1,158 @@
+@import '../helpers/variables';
+
+// Desktop
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    max-width: 650px;
+    width: 100%;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h4 {
+      color: $white;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 120%;
+    }
+
+    h1 {
+      color: $white;
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 100%;
+    }
+
+    p {
+      color: $gray;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 140%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    padding: 16px 32px;
+    height: 60px;
+    border-radius: 12px;
+    font-size: 20px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button--secondary {
+    border: 2px solid #fff;
+
+    &:hover {
+      transition: $transition;
+      color: $black;
+      background: #fff;
+    }
+  }
+
+  &__image {
+    max-width: 350px;
+    width: 100%;
+    height: 350px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 768px) {
+  .hero {
+    &__container {
+      flex-direction: column-reverse;
+    }
+
+    &__text {
+      h4 {
+        color: $white;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 120%;
+      }
+
+      h1 {
+        color: $white;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 100%;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    &__button {
+      font-size: 16px;
+    }
+
+    &__image {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Small devices
+@media (max-width: 480px) {
+  .hero {
+    &__text {
+      h1 {
+        font-size: 28px;
+      }
+
+      h4 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &__button {
+      font-size: 14px;
+      padding: 16px 24px;
+    }
+
+    &__image {
+      border-radius: 16px;
+    }
+  }
+}
